@@ -21,6 +21,7 @@ function displayScreen(data){
     data.map(function(elem){
         var div = document.createElement("div");
         var image = document.createElement("img");
+        image.classList.add("screenimage");
         image.setAttribute("src", elem.image_url);
         image.setAttribute("alt", elem.itemname);
         image.style.width ="100vw"
@@ -248,7 +249,26 @@ function displayAhaOriginals(data){
 }
 
 
-document.querySelector(".cards").addEventListener(onmouseover, mouseover);
-function mouseover(){
-    TransformS
+// document.querySelector(".cards").addEventListener(onmouseover, mouseover);
+// function mouseover(){
+//     TransformS
+// }
+
+document.getElementsByClassName("imagediv").onclick = function(){
+    location.href = "www.youtube.com";
 }
+
+var image = document.getElementsByClassName("imagediv");
+for(var i=0; i<image.length; i++){
+    var images = image[i];
+    images.onclick= function(event){
+        console.log(images);        
+        window.location.href = "movie.html";
+        var div = document.createElement("div");
+        // div.classList.add("new");
+        // var image = document.
+        div.append(images);
+        document.getElementById("new").append(div);
+    };
+}
+

@@ -1,23 +1,50 @@
 .navbaar > img {
     height: 70px;
     width: 100px;
+    align-content: stretch;
 }
 body{
+    z-index: 1000;
     background-color: black;
+    /* padding-top: 200px; */
+    top: 200px;
 }
 
 .top_section{
+    /* z-index: 1000; */
+    width: 100%;
+    background-color: black;
+    opacity: 90%;
     display: flex;
-    
+    position: fixed;
+    height: auto;
+    /* box-sizing: content-box; */
+    margin-top: -10px;
+    z-index: 10;
 }
 .right_section{
+    flex : 2;
     display: flex;
     align-items: center;
-    width: 50%;
-    justify-content: right;
-    margin: auto;
-    gap: 20px;
-    color: white;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.Subscribe{
+    margin-top: -15px;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(195, 70, 16, 0.955);
+    border-radius: 30px;
+    display: flex;
+    right :20px;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+.signindiv{
+    margin : 0 10px;
+    justify-content :flex-end;
 }
 .navbaar{
     width: 50%;
@@ -26,7 +53,13 @@ body{
     align-items: center;
     justify-content: space-around;
     color: white;
+    /* z-index: 1000000000000; */
+}
 
+span{
+    color: white;
+    text-decoration: underline;
+    /* background-color: transparent; */
 }
 
 #screen{
@@ -35,10 +68,11 @@ body{
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: -20px;
+    padding-top: 10px;
     /* overflow-x: scroll; */
     /* overflow-x: auto; */
     overflow-y: hidden;
+    /* border: 2px solid red; */
 }
 
 h1{
@@ -52,7 +86,7 @@ h1{
     /* max-width: 100vw; */
     padding-top: 10px;
     margin-top: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     overflow-x: scroll;
@@ -105,3 +139,73 @@ h1{
     transition-delay: 0s;
     transition-duration: 0.5s;
 }
+
+@media(max-width: 900px) {
+    /* .navbaar{
+        display: flex;
+        flex-direction: column;
+    } */
+    .right_section{
+        
+    }
+    .screenimage, #screen{
+        height: 300px;
+    }
+
+    .navbaar{
+        width: 100vw;
+    }
+    .right_section{
+        display: none;
+    }
+  }
+
+@media screen and (min-width:900px ){
+    .navbaar{
+        min-width: 50vw;
+        transition: all;
+    }
+    #screen, .screenimage{
+        height: 415px;
+    }
+}
+
+p, p1, h2, h5{
+    color: white;
+}
+#button_div{
+    /* color: white; */
+    align-items: center;
+    width:auto;
+    padding-top: 30px;
+    padding-left: 30vw;
+    /* align-items: stretch; */
+    display:flex;
+    align-items: center;
+    /* margin: auto; */
+    gap: 20px;
+    flex-direction: row;
+    align-content: space-around;
+}
+#play, #subscribe_button {
+   width: 20vw;
+   /* size: 20px; */
+   height: 60px;
+}
+#text {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cast{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    align-items: center;
+    /* align-content: space-around; */
+    gap: 50px;
+    /* flex-direction: column; */
+}
+#cast_h2{
+    padding-left: 20px;
+}
+
