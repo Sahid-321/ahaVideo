@@ -1,9 +1,5 @@
 
-
-
     document.querySelector("form").addEventListener("submit", submitFunc);
-
-    document.querySelector("#loginbutton").addEventListener("click", loginfunction);
 
     document.querySelector("#mobile").addEventListener("click", submitFunc1);
     document.querySelector("#facebook").addEventListener("click", submitFunc2);
@@ -14,45 +10,59 @@
 
 var span = document.createElement("span");
 span.innerText = "Enter Password:";
-var password = document.createElement("input");
-password.setAttribute("type","password");
-password.setAttribute("placeholder","Password")
-password.setAttribute("id","password")
+var pass = document.createElement("input");
+pass.setAttribute("type","password");
+pass.setAttribute("placeholder","Password")
+pass.setAttribute("id","pass")
 
-function loginfunction(){
-  window.location.href = "Login.html";
-}
 
-document.querySelector(".inputBox").append(span,password)
+document.querySelector(".inputBox").append(span,pass)
+
+
+
+
 
     function submitFunc(){
-     event.preventDefault();
-     var email = document.getElementById("email").value ;
-     var password = document.getElementById("password").value;
-      if(email == ""|| password == ""){
-          alert("ENTER DETAILS FIRST");
-      }else{
-          // localStorage.setItem
-          var arr = JSON.parse(localStorage.getItem("data"))|| [];
 
+     event.preventDefault();
+
+   
+
+     var email = document.getElementById("email").value ;
+     var pass = document.getElementById("pass").value;
+
+
+if(email == ""|| pass == ""){
+    alert("enter details");
+}else{
+    var arr = JSON.parse(localStorage.getItem("data"))|| [];
 
 var user = {
 email: email,
-password: password,
+pass: pass,
 
 }
 arr.push(user);
 localStorage.setItem("data", JSON.stringify(arr));
-alert("SIGN UP SUCCESSFUL");
-window.location.href = "Login.html";
 
-
-var plandetail={plan:'Telugu Quarterly Plan',price:'99'}
-    localStorage.setItem("plandetail",JSON.stringify(plandetail));
-
+window.location.href = "index.html"
 }
-    }
+
+
+
     
+
+
+
+
+
+
+
+
+
+    
+  
+    }
     function submitFunc1(){
         alert("yes its mobile")
     }
@@ -64,3 +74,4 @@ window.location.href = "https://www.facebook.com/"
   function submitFunc3(){
     window.location.href = "https://www.google.com/"
   }
+  
