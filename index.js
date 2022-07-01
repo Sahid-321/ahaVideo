@@ -213,6 +213,7 @@ function displayScreen(data){
         image.classList.add("screenimage");
         image.setAttribute("src", elem.image_url);
         image.setAttribute("alt", elem.itemname);
+        // image.setAttribute("name", slide);
         image.style.width ="100vw"
         div.append(image);
         document.getElementById("screen").append(div);
@@ -442,9 +443,7 @@ function displayAhaOriginals(data){
 // function mouseover(){
 //     TransformS
 // }
-var a = document.getElementById("screen").onclick = function(){
-    location.href = "www.youtube.com";
-}
+
 
 var image = document.getElementsByClassName("cards");
 for(var i=0; i<image.length; i++){
@@ -459,6 +458,26 @@ for(var i=0; i<image.length; i++){
         document.getElementById("new").append(div);
     };
 }
+
+// var i = 0;
+//      var images = [];
+//      var time = 3500 ;
+//      images[0] = 'https://image-resizer-cloud-api.akamaized.net/image/017E3F9A-8ACA-4985-BA42-9974895AA6FF/0-3x1.jpg?width=2304'
+//      images[1] = 'https://image-resizer-cloud-api.akamaized.net/image/EC0FF483-82F3-4F28-BEED-9243E5C686E3/0-3x1.jpg?width=1152'
+//      images[2] = 'https://image-resizer-cloud-api.akamaized.net/image/58873AFE-D16F-4ADD-8EA7-658462587A83/0-3x1.jpg?width=2304'
+//      images[3] = 'https://image-resizer-cloud-api.akamaized.net/image/61612E1F-9AD7-42C1-A38A-BBD580261DAD/0-3x1.jpg?width=2304'
+
+    //  function changeImage(){
+    //      document.slide.src = images[i]
+    //      if ( i< images.length-1){
+    //         i++
+    //      }
+    //      else{
+    //          i = 0
+    //      }
+    //      setTimeout("changeImage()", time);
+    //  }
+            
 
 
 

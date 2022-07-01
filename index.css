@@ -85,12 +85,12 @@ span{
 .screenimage{
     animation-timing-function: linear;
 }
-/* @keyframes */
 
 h1{
-    color : white;
+    color: white;
     /* margin-bottom: 0px; */
 }
+
 #new_release, #handpicked, #aha_originals{
     /* width: 100; */
     height: auto;
