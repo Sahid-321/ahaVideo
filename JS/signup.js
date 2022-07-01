@@ -35,6 +35,7 @@ document.querySelector(".inputBox").append(span,pass)
 if(email == ""|| pass == ""){
     alert("enter details");
 }else{
+    alert("You are successfully logged in")
     var arr = JSON.parse(localStorage.getItem("data"))|| [];
 
 var user = {
