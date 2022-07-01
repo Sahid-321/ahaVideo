@@ -12,27 +12,38 @@
 
      var email = document.getElementById("email").value;
 
-     var detail = JSON.parse(localStorage.getItem("data"));
-
-     if(email == ""){
-      //window.location.href = "SignUp.html"
-      var p = document.getElementById("pTag").innerText = "Please Enter a Valid Email";
-     }else{
-      window.location.href = "SignUp.html"
-     }
+     var detail = JSON.parse(localStorage.getItem("data")) || [];
+     var check = false;
     
-     detail.filter(function(elem){
+if(email == ""){
+  window.location.href = "SignUp.html"
+}
 
-      if( elem.email == email){
-        window.location.href = "index.html";
-        alert("success")
-   
+
+     detail.filter(function (elem) {
+      if (elem.email == email) {
+     
       }
-      
-      
-     })
-    
-
+      if (elem.email == email) {
+        check = true;
+      }
+      else {
+        check = false;
+      }
+    })
+    if (check) {
+      alert("You are successfully logged in")
+      window.location.href = "index.html";
+    }
+    else {
+      if (check == false) {
+        alert("Email Does Not found, Please SIGN-UP First");
+        window.location.href = "SignUp.html";
+      }
+      else {
+        alert("Wrong Credentials Entered");
+      }
+    }
 
    
 
