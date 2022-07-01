@@ -3,6 +3,12 @@
     width: 100px;
     align-content: stretch;
 }
+a{
+    text-decoration: none;
+}
+* a > span{
+    text-decoration: none;
+}
 body{
     z-index: 1000;
     background-color: black;
@@ -63,6 +69,7 @@ span{
 }
 
 #screen{
+    animation: forwards;
     height: 400px;
     width: 100vw;
     display: flex;
@@ -75,11 +82,15 @@ span{
     /* border: 2px solid red; */
 }
 
+.screenimage{
+    animation-timing-function: linear;
+}
+/* @keyframes */
+
 h1{
-    color: white;
+    color : white;
     /* margin-bottom: 0px; */
 }
-
 #new_release, #handpicked, #aha_originals{
     /* width: 100; */
     height: auto;
