@@ -151,6 +151,11 @@
     font-size: 16px;
 } */
 
+#pTag{
+  color: red;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
     </style>
 
 </head>
@@ -173,7 +178,7 @@
                     <span>email id :</span>
                     <input id="email" type="email" placeholder="Email">
                 </div>
-                
+                <div id="dTag"> <p id="pTag"></p> </div>
 
              
 
@@ -186,7 +191,7 @@
         <input id="next" type="submit" value="Next" class="submit-btn">
         
         <div id="para" style="margin: 30px 0 0 20%">
-            <p>Or, Use one of the following option</p>
+            <p id="p">Or, Use one of the following option</p>
         </div>
 
      
@@ -218,46 +223,99 @@
     document.querySelector("form").addEventListener("submit", submitFunc);
 
     document.querySelector("#mobile").addEventListener("click", submitFunc1);
-var email = "sahid@gmail.com";
-localStorage.setItem("data",JSON.stringify(email));
-
+    document.querySelector("#facebook").addEventListener("click", submitFunc2);
+    document.querySelector("#google").addEventListener("click", submitFunc3);
 
 
 
     function submitFunc(){
      event.preventDefault();
+
+     var email = document.getElementById("email").value;
+
+     var detail = JSON.parse(localStorage.getItem("data"));
+
+     if(email == ""){
+      //window.location.href = "SignUp.html"
+      var p = document.getElementById("pTag").innerText = "Please Enter a Valid Email";
+     }else{
+      window.location.href = "SignUp.html"
+     }
+    
+     detail.filter(function(elem){
+
+      if( elem.email == email){
+        window.location.href = "https://www.google.com/";
+        alert("success")
+   
+      }
+      
+      
+     })
+    
+
+
+     // I was trying to put log in and sign up in single page but I unable to complete but now I am to create in another method
      
-        var email = document.getElementById("email").value;
-        var data = JSON.parse(localStorage.getItem("data"));
-        if(data != email){
-            alert("error")
-            var span = document.createElement("span");
-span.innerText = "Enter Password:";
-var pass = document.createElement("input");
-pass.setAttribute("type","password");
-pass.setAttribute("placeholder","Password")
-pass.setAttribute("id","pass")
+//         var email = document.getElementById("email").value;
 
-document.getElementById("next").value = "Sign Up"
-document.querySelector(".inputBox").append(span,pass)
+//           var span = document.createElement("span");
+//           span.innerText = "Enter Password:";
+//           var pass = document.createElement("input");
+//           pass.setAttribute("type","password");
+//           pass.setAttribute("placeholder","Password")
+//           pass.setAttribute("id","pass")
+//           document.getElementById("next").value = "Sign Up"
 
-            }else{
-                alert("success")
+//           var detail = JSON.parse(localStorage.getItem("data"));
 
-            }
-//         data.map(function(elem){
-//             if(elem.email == email){
-// alert("success")
+// console.log(detail.email);
+//         var arr = JSON.parse(localStorage.getItem("data"))|| [];
+
+//         var user = {
+//         email: email,
+//         pass: pass.value,
+
+//         }
+//         arr.push(user);
+//         localStorage.setItem("data", JSON.stringify(arr));
+
+       
+
+//  detail.filter(function(elem){
+
+//   if(elem.email != email ){
+//             alert("error")
+     
+        
+//             document.querySelector(".inputBox").append(span,pass)
+
+
 //             }else{
-//                 alert("error")
+//                 alert("success")
+
 //             }
-//         })
 
+//  })
+
+
+
+
+
+
+
+    
+  
     }
-
     function submitFunc1(){
         alert("yes its mobile")
     }
 
+  function submitFunc2(){
+window.location.href = "https://www.facebook.com/"
 
+  }
+  function submitFunc3(){
+    window.location.href = "https://www.google.com/"
+  }
 </script>
