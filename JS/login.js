@@ -1,67 +1,58 @@
 
-
-
     document.querySelector("form").addEventListener("submit", submitFunc);
 
     document.querySelector("#mobile").addEventListener("click", submitFunc1);
     document.querySelector("#facebook").addEventListener("click", submitFunc2);
     document.querySelector("#google").addEventListener("click", submitFunc3);
 
-    function clearmessage(){
-      document.getElementById("pTag").innerText = "";
-    }
+
 
     function submitFunc(){
      event.preventDefault();
 
      var email = document.getElementById("email").value;
-     var password = document.getElementById("password").value;
-     var detail = JSON.parse(localStorage.getItem("data"));
-     console.log(detail);
 
-     if(email == ""){
-      //window.location.href = "SignUp.html"
-      var p = document.getElementById("pTag").innerText = "Please Enter a Valid Email";
-     }
-     else{
+     var detail = JSON.parse(localStorage.getItem("data")) || [];
+     var check = false;
     
-    var check = false;
-    var emailcheck = false;
-     detail.filter(function(elem){
-      if(elem.email == email){
-        emailcheck = true;
+if(email == ""){
+  window.location.href = "SignUp.html"
+}
+
+
+     detail.filter(function (elem) {
+      if (elem.email == email) {
+     
       }
-      if( elem.email == email && elem.password == password){
-        // alert("success")
-        // window.location.href = "index.html";
+      if (elem.email == email) {
         check = true;
       }
-      else{
-        // alert("Check Credentials");
+      else {
         check = false;
       }
-     })
-     if(check){
-        alert("You are successfully logged in")
-        window.location.href = "index.html";
-        // var name = document.createElement("div");
-        // name.innerText = email;
-        // name.innerText = email;
-        // windows.parent.document.getElementById("right").append(name);
-        
-     }
-     else{
-      if(emailcheck == false){
+    })
+    if (check) {
+      alert("You are successfully logged in")
+      window.location.href = "index.html";
+    }
+    else {
+      if (check == false) {
         alert("Email Does Not found, Please SIGN-UP First");
         window.location.href = "SignUp.html";
       }
-      else{
+      else {
         alert("Wrong Credentials Entered");
       }
     }
-        
-     }
-      }
+
+   
+
+
+
+
+    
+  
+    }
     function submitFunc1(){
         alert("yes its mobile")
     }
