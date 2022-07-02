@@ -7,9 +7,31 @@
     <link rel="stylesheet" href="kids.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Sen&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css>
-    <title>Document</title>
+    <title>Telugu Cartoons - Watch movies for Kids online on aha</title>
+    <style>
+        .swiper-pagination-bullet {
+            background-color: #fff;
+        }
+        .swiper-pagination {
+        position: relative;
+        margin-top: 20px;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+      .swiper-button-next,.swiper-button-prev{
+        color: #fff;
+      }
+    </style>
 </head>
 <body>
     <div class = navbar>
@@ -40,11 +62,16 @@
     
     <div class = "container">
         <div class="content-container">
-            <div class="feature-content"
-               style = "background: linear-gradient(to top, rgba(0,0,0,0), #151515), url(balganesha2.jpg);"
-               
-               >
-                
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="https://image-resizer-cloud-api.akamaized.net/image/AE0B5149-A41D-492E-9031-9D00DA960641/0-3x1.jpg?width=2304" alt=""></div>
+                  <div class="swiper-slide"><img src="https://image-resizer-cloud-api.akamaized.net/image/E1393AA6-177A-419F-80D6-0B40F698AC90/0-3x1.jpg?width=2304" alt=""></div>
+                  <div class="swiper-slide"><img src="https://image-resizer-cloud-api.akamaized.net/image/A58C083C-585A-4A6F-BB39-0272D41669E8/0-3x1.jpg?width=2304" alt=""></div>
+                  <div class="swiper-slide"><img src="https://image-resizer-cloud-api.akamaized.net/image/D63864BB-29C7-46C2-98BE-9E679222E6D6/0-3x1.jpg?width=2304" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class = "movie-list-container">
                 <h2 class = "movie-list-title">New Release</h2>
@@ -422,6 +449,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src ="kid.js"></script>
 </body>
 </html>

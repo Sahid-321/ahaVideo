@@ -5,7 +5,7 @@
 
 body{
     font-family: "Roboto",sans-serif;
-    background-color: #333;
+    background-color:  rgb(34, 32, 32);
 }
 .navbar{
     width: 100%;
@@ -78,9 +78,9 @@ body{
     margin-bottom: 40px;
 }
 .container{
-    background-color: black;
+    color: white;
     min-height: calc(100vh - 50px);
-    color: #fff;
+    background-color:rgb(34,33,36);
     
 }
 .content-container{
@@ -88,7 +88,6 @@ body{
 }
 .feature-content{
     height: 55vh;
-    
     background-color: aqua;
     padding: 50px;
     background-position: center;
@@ -116,11 +115,13 @@ body{
 }
 .movie-list-container{
     padding: 0 25px;
+    /* margin-top: -10px; */
     
 }
 .movie-list-wrapper{
     position: relative;
     overflow: hidden;
+    margin-top: -20px;
 }
 .movie-list{
     display: flex;
@@ -140,7 +141,7 @@ body{
     
 }
 .movie-list-title{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .movie-list-item-image{
     transition: all 1s ease-in-out; 
@@ -178,3 +179,5 @@ body{
     cursor: pointer;
 }
 
+
+      
