@@ -84,10 +84,10 @@ body{
     
 }
 .content-container{
-    margin-left : 50px;
+    /* margin-left : 50px; */
 }
 .feature-content{
-    height: 50vh;
+    height: 55vh;
     
     background-color: aqua;
     padding: 50px;
@@ -115,7 +115,7 @@ body{
     cursor: pointer;
 }
 .movie-list-container{
-    padding: 5px;
+    padding: 0 25px;
     
 }
 .movie-list-wrapper{

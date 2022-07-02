@@ -19,3 +19,6 @@ arrows.forEach((arrow,i)=>{
     //console.log(movielist[i].querySelectorAll("img").length);
     
 })
+
+
+
